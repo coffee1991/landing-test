@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taller de Pruebas de Software</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <!-- HEADER -->
+  <header class="bg-primary text-white text-center p-4">
+    <h1>Taller de Pruebas de Software</h1>
+    <p>Proyecto: E-commerce Zapatería</p>
+    <small>Autor: John Alexander Hidalgo | 2025</small>
+  </header>
+
+  <!-- INTRODUCCIÓN -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Introducción</h2>
+    <p>
+      Las pruebas de software son un conjunto de actividades que buscan garantizar la calidad, confiabilidad y correcto funcionamiento de un sistema. 
+      A través de ellas se detectan errores, se validan requisitos y se asegura que la aplicación cumpla con las expectativas del cliente. 
+      En este documento se presentan los tipos de pruebas de software más comunes, se seleccionan las más adecuadas para el proyecto de 
+      e-commerce de una zapatería, se instala una herramienta de pruebas y se ejecutan pruebas básicas sobre la solución.
+    </p>
+  </section>
+
+  <!-- TIPOS DE PRUEBAS -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Tipos de Pruebas de Software</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Pruebas Unitarias</h5>
+            <p>Evalúan módulos o funciones individuales del sistema.</p>
+            <p><strong>Beneficio:</strong> Detectan errores en etapas tempranas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Pruebas de Integración</h5>
+            <p>Verifican la interacción entre módulos del sistema.</p>
+            <p><strong>Beneficio:</strong> Garantizan que los componentes funcionen juntos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Pruebas Funcionales</h5>
+            <p>Validan que el software cumpla con los requisitos.</p>
+            <p><strong>Beneficio:</strong> Confirman la experiencia esperada por el usuario.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Pruebas de Aceptación</h5>
+            <p>Simulan el uso real por parte del cliente.</p>
+            <p><strong>Beneficio:</strong> Aseguran que el sistema es utilizable y cumple objetivos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Pruebas de Rendimiento</h5>
+            <p>Evalúan velocidad, estabilidad y capacidad de respuesta.</p>
+            <p><strong>Beneficio:</strong> Confirman soporte a múltiples usuarios.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Pruebas de Seguridad</h5>
+            <p>Revisan vulnerabilidades y protección de datos.</p>
+            <p><strong>Beneficio:</strong> Previenen accesos no autorizados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRUEBAS ADECUADAS -->
+  <section class="bg-white py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Pruebas adecuadas para el proyecto</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">✅ <strong>Pruebas Unitarias:</strong> asegurar que carrito, pagos y login funcionen individualmente.</li>
+        <li class="list-group-item">✅ <strong>Pruebas de Integración:</strong> validar interacción entre backend (Spring Boot + MySQL) y frontend (React).</li>
+        <li class="list-group-item">✅ <strong>Pruebas Funcionales:</strong> comprobar que el usuario pueda buscar, agregar al carrito y comprar zapatos.</li>
+        <li class="list-group-item">✅ <strong>Pruebas de Seguridad:</strong> proteger datos de usuarios y transacciones.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HERRAMIENTA -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Herramienta utilizada</h2>
+    <div class="card shadow-sm p-4">
+      <h5 class="card-title">Postman</h5>
+      <p>
+        Se seleccionó <strong>Postman</strong> como herramienta de pruebas de software por su facilidad de uso, interfaz amigable y 
+        soporte para validar endpoints del backend. 
+      </p>
+      <p>Con Postman se validaron los siguientes endpoints:</p>
+      <ul>
+        <li><code>GET /productos</code> – Listar zapatos.</li>
+        <li><code>POST /usuarios/login</code> – Autenticación con credenciales válidas e inválidas.</li>
+        <li><code>POST /carrito</code> – Agregar productos al carrito.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RESUMEN DE PRUEBAS -->
+  <section class="bg-white py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Resumen de Pruebas Realizadas</h2>
+      
+      <h4>Caso 1: Credenciales Válidas</h4>
+      <p>Se probó el endpoint <code>POST /api/auth/login</code> con credenciales correctas. El resultado esperado fue una redirección (302), y el resultado obtenido fue ✅ OK.</p>
+      <img src="/recursos/test1.png" alt="Prueba credenciales válidas" class="img-fluid rounded shadow mb-4">
+      
+      <h4>Caso 2: Credenciales Inválidas</h4>
+      <p>Se probó el endpoint <code>POST /api/auth/login</code> con credenciales incorrectas. El resultado esperado fue también redirección (302), y el resultado obtenido fue ✅ OK.</p>
+      <img src="/recursos/test2.png" alt="Prueba credenciales inválidas" class="img-fluid rounded shadow">
+    </div>
+  </section>
+
+  <!-- CONCLUSIONES -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Conclusiones</h2>
+    <p>
+      ✔️ Las pruebas de software son esenciales para asegurar la calidad de un sistema.  
+      ✔️ Para el e-commerce de la zapatería, las pruebas unitarias, de integración, funcionales y de seguridad son las más relevantes.  
+      ✔️ Con Postman y JUnit se comprobó la correcta comunicación entre frontend y backend.  
+      ✔️ La aplicación respondió correctamente en operaciones clave como autenticación, listado de productos y manejo de carrito.  
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center p-3">
+    <p>Autor: John Alexander Hidalgo - Septiembre 2025</p>
+  </footer>
+
+</body>
+</html>
